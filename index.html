@@ -1,222 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tamil Harmonic Trader Raj™</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Trader</title>
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1222995969951335'); /* New Pixel ID updated */
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1222995969951335&ev=PageView&noscript=1"
+    /></noscript>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #050a30 0%, #000c66 50%, #7ec8e3 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
 
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1222995969951335');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1222995969951335&ev=PageView&noscript=1"
-/></noscript>
-<style>
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+        .card {
+            background-color: #111827;
+            width: 90%;
+            max-width: 400px;
+            padding: 40px 20px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
 
-body{
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background:#0b0f19;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-padding: 20px;
-}
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #fff;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
 
-.container{
-width:100%;
-max-width:400px;
-background:#111827;
-border-radius:25px;
-padding:30px;
-text-align:center;
-box-shadow:0 10px 40px rgba(0,0,0,0.7);
-border: 1px solid #1f2937;
-}
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
 
-.logo{
-width:130px;
-height:130px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:15px;
-border: 3px solid #00c6ff;
-animation:float 3s ease-in-out infinite;
-}
+        h1 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
 
-@keyframes float{
-0%{transform:translateY(0)}
-50%{transform:translateY(-10px)}
-100%{transform:translateY(0)}
-}
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 2;
+        }
 
-h1{
-font-size:24px;
-margin-bottom:5px;
-color: #fff;
-}
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #7cf0e5, #49dcb1);
+            color: #000;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 25px;
+            gap: 10px;
+        }
 
-.badge{
-background:linear-gradient(45deg,#ff512f,#ff9966);
-padding:10px 20px;
-border-radius:30px;
-display:inline-block;
-margin:15px 0;
-font-weight:bold;
-font-size: 14px;
-}
+        .footer-text {
+            font-size: 13px;
+            color: #9ca3af;
+        }
 
-.telegram-btn{
-display:flex;
-align-items: center;
-justify-content: center;
-margin:20px 0;
-padding:18px;
-border-radius:50px;
-background:linear-gradient(90deg,#00c6ff,#0072ff);
-color:white;
-font-weight:bold;
-font-size:18px;
-text-decoration:none;
-animation:blink 1.5s infinite;
-transition: transform 0.3s;
-}
-
-.telegram-btn:hover {
-transform: scale(1.05);
-}
-
-.telegram-btn img{
-width:24px;
-margin-right:10px;
-}
-
-@keyframes blink{
-0%{box-shadow:0 0 10px #00c6ff;}
-50%{box-shadow:0 0 25px #00c6ff;}
-100%{box-shadow:0 0 10px #00c6ff;}
-}
-
-.text{
-margin-top:15px;
-line-height:1.6;
-font-size:16px;
-}
-
-.highlight{
-color:#ff6b6b;
-font-weight:bold;
-}
-
-.profit{
-color:#ffd700;
-font-size:18px;
-margin:15px 0;
-font-weight:bold;
-text-transform: uppercase;
-}
-
-.features{
-margin-top:15px;
-text-align:left;
-line-height:1.8;
-font-size:14px;
-background: rgba(255,255,255,0.05);
-padding: 15px;
-border-radius: 15px;
-}
-
-.ads-setup-box {
-margin-top: 25px;
-padding: 15px;
-border-top: 1px solid #1f2937;
-}
-
-.ads-link {
-display: inline-block;
-text-decoration: none;
-color: #00ffcc;
-font-weight: bold;
-border: 2px dashed #00ffcc;
-padding: 10px 15px;
-border-radius: 10px;
-transition: all 0.3s ease;
-font-size: 14px;
-}
-
-.ads-link:hover {
-background: #00ffcc;
-color: #000;
-transform: translateY(-3px);
-}
-
-.footer{
-margin-top:20px;
-font-size:12px;
-color:#6b7280;
-}
-</style>
+        .footer-text a {
+            color: #49dcb1;
+            text-decoration: none;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
-<img src="logo.png" class="logo" alt="Marathi Trader">
+<div class="card">
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo">
+    </div>
 
-<h1>Tamil Harmonic Trader Raj™</h1>
-<div style="font-size: 20px;">💸🏆</div>
+    <h1>Day Trader₹</h1>
 
-<div class="badge">📊 17 Years Trading Experience</div>
+    <div class="info-list">
+        <div>📊 NIFTY · BANKNIFTY · SENSEX</div>
+        <div>✅ DAILY CALLS AVAILABLE</div>
+        <div>⭐ 95% Accuracy</div>
+        <div>🎯 6+ Years Experience</div>
+    </div>
 
-<div style="margin: 10px 0;">👇 JOIN NOW FOR FREE 👇</div>
-
-<a class="telegram-btn" href="https://t.me/+tOFwZD9KhZZjMGJl">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
-    REQUEST TO JOIN CHANNEL
-</a>
-
-<div class="text">
-    Do you want to make money from trading?<br>
-    <span class="highlight">Click the blue button above to join 🚀</span>
-</div>
-
-<div class="profit">
-    💎 DAILY PROFIT GUARANTEE 💎
-</div>
-
-<div class="features">
-    ✅ Live Daily Trades from my portfolio<br>
-    ✅ Exclusive Professional Signals<br>
-    ✅ 90%+ High Accuracy Consistency<br>
-    ✅ Instant Real-time Market Alerts
-</div>
-
-<div class="ads-setup-box">
-    <p style="margin-bottom: 10px; font-size: 13px;">Special Inquiry?</p>
-    <a href="https://t.me/+jE7sEbzR23gwM2U1" class="ads-link">
-        🚀 Meta Ads Setup ke liye DM karo: KUNAL ADS
+    <a href="https://t.me/+2mCEnKtR0wk2NmFl" class="btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="25" alt="TG Logo">
+        Join Telegram
     </a>
-</div>
 
-<div class="footer">
-    © 2026 Marathi Trader - Secure Trading Community
-</div>
-
+    <div class="footer-text">
+        Contact Only For Ads Setup 👑<br>
+        Ads Managed By <a href="https://t.me/+jE7sEbzR23gwM2U1">Kunal</a>
+    </div>
 </div>
 
 </body>
